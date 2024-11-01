@@ -6,7 +6,7 @@
 /*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:08:26 by gafreire          #+#    #+#             */
-/*   Updated: 2024/11/01 18:09:22 by gafreire         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:18:55 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,26 @@ static int	formats(va_list arguments, char format)
 	int size_format;
 
 	size_format = 0;
-	if (format == 'd')
+	if (format == 'c')
+	{
+		ft_putchar_fd(va_arg(arguments, char), 1);
+	}
+	else if (format == 's')
+	{
+		ft_putstr_fd(va_arg(arguments, char *), 1);
+		// falta añadir \0
+	}
+	else if (format == 'p')
+	{
+	}
+	else if (format == 'd')
 	{
 		ft_putnbr_fd(va_arg(arguments, int), 1);
 		// size_format = ();
 		// llamar itoa para saber tamaño
+	}
+	else if (format == 'i')
+	{
 	}
 	else if (format == 'u')
 	{
@@ -59,17 +74,14 @@ static int	formats(va_list arguments, char format)
 	else if (format == 'x')
 	{
 	}
-	else if (format == 's')
-	{
-		ft_putstr_fd(va_arg(arguments, char *), 1);
-		// falta añadir \0
-	}
-	else if (format == 'c')
-	{
-		ft_putchar_fd(va_arg(arguments, char), 1);
-	}
-	else if (format == 'p')
+	else if (format == 'X')
 	{
 	}
+	else if (format == '%')
+	{
+		write(1, '%', 1);
+		size_format = 1;
+	}
+
 	return (size_format);
 }
