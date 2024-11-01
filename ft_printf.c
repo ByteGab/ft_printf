@@ -6,7 +6,7 @@
 /*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:08:26 by gafreire          #+#    #+#             */
-/*   Updated: 2024/11/01 18:18:55 by gafreire         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:31:17 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ int	ft_printf(char const *format, ...)
 {
 	va_list	arguments;
 	int		i;
+	int		value;
 
 	va_start(arguments, format);
 	i = 0;
+	value = 0;
 	while (format[i] != NULL)
 	{
 		write(1, format[i], 1);
@@ -35,12 +37,13 @@ int	ft_printf(char const *format, ...)
 		{
 			if (format[i + 1] != '\0')
 			{
-				i += formats(arguments, format[i]);
+				value += formats(arguments, format[i]);
 			}
 		}
 		i++;
 	}
-	return (0);
+	value += i;
+	return (value);
 }
 static int	formats(va_list arguments, char format)
 {
