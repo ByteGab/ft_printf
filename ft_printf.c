@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdarg.h>
 
 // va_start
@@ -52,8 +52,7 @@ static int	formats(va_list arguments, char format)
 	}
 	else if (format == '%')
 	{
-		write(1, '%', 1);
-		size_format = 1;
+		size_format = ft_putcharInt(va_arg(arguments, char));
 	}
 	return (size_format);
 }
@@ -87,7 +86,7 @@ int	ft_printf(char const *format, ...)
 	va_end(arguments);
 	return (value);
 }
-
+/*
 int	main(void)
 {
 	int print = ft_printf("Hola que tal %s", "hola");
@@ -95,3 +94,4 @@ int	main(void)
 	ft_printf("%i", print);
 	write(1, "\n", 1);
 }
+*/
