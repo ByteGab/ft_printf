@@ -3,12 +3,12 @@ SOURCES = ft_printf.c \
 			ft_putcharInt.c \
 			ft_putstrInt.c \
 			ft_putnbrInt.c \
-			ft_putnbrUn.c \
+			ft_putnbrUn.c 
 OBJECTS = $(SOURCES:.c=.o)                                                 
 
 CC = cc                                                                      
 CFLAGS = -Wall -Wextra -Werror
-INCLUDE = libftprintf.h
+INCLUDE = ft_printfprintf.h
 RM = rm -rf                                                                     
 
 all: $(NAME)
