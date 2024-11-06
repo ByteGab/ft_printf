@@ -14,7 +14,7 @@
 
 int	ft_putnbrUn(unsigned int n)
 {
-	int size_format;
+	unsigned int size_format;
 
 	if (n < 0)
 	{
