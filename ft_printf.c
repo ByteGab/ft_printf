@@ -27,7 +27,7 @@ static int	formats(va_list arguments, char format)
 
 	size_format = 0;
 	if (format == 'c')
-		size_format = ft_putcharInt(va_arg(arguments, char));
+		size_format = ft_putcharInt(va_arg(arguments, int));
 	else if (format == 's')
 		size_format = ft_putstrInt(va_arg(arguments, char *));
 	else if (format == 'p')
@@ -39,9 +39,7 @@ static int	formats(va_list arguments, char format)
 	else if (format == 'i')
 		size_format = ft_putnbrInt(va_arg(arguments, int));
 	else if (format == 'u')
-	{
-		// Imprime un número decimal (base 10) sin signo.
-	}
+		size_format = ft_putnbrUn(va_arg(arguments, int));
 	else if (format == 'x')
 	{
 		// Imprime un número hexadecimal (base 16) en minúsculas
@@ -52,7 +50,7 @@ static int	formats(va_list arguments, char format)
 	}
 	else if (format == '%')
 	{
-		size_format = ft_putcharInt(va_arg(arguments, char));
+		size_format = ft_putcharInt('%');
 	}
 	return (size_format);
 }
@@ -86,12 +84,11 @@ int	ft_printf(char const *format, ...)
 	va_end(arguments);
 	return (value);
 }
-/*
+
 int	main(void)
 {
-	int print = ft_printf("Hola que tal %s", "hola");
-	write(1, "\n", 1);
+	int print = ft_printf("Hola que tal %i", 12);
+	ft_printf("\n");
 	ft_printf("%i", print);
-	write(1, "\n", 1);
+	ft_printf("\n");
 }
-*/
