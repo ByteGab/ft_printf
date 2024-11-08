@@ -6,7 +6,7 @@
 /*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:08:26 by gafreire          #+#    #+#             */
-/*   Updated: 2024/11/02 20:51:22 by gafreire         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:22:35 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ static int	formats(va_list arguments, char format)
 	else if (format == 's')
 		size_format = ft_putstrInt(va_arg(arguments, char *));
 	else if (format == 'p')
-	{
-		// El puntero void* dado como argumento se imprime en formato hexadecimal
-	}
+		size_format = ft_voidHex(va_arg(arguments, void *));
 	else if (format == 'd')
 		size_format = ft_putnbrInt(va_arg(arguments, int));
 	else if (format == 'i')
@@ -41,17 +39,11 @@ static int	formats(va_list arguments, char format)
 	else if (format == 'u')
 		size_format = ft_putnbrUn(va_arg(arguments, int));
 	else if (format == 'x')
-	{
-		// Imprime un número hexadecimal (base 16) en minúsculas
-	}
+		size_format = ft_lowerHex(va_arg(arguments, char *));
 	else if (format == 'X')
-	{
-		// Imprime un número hexadecimal (base 16) en mayúsculas.
-	}
+		size_format = ft_upperHex(va_arg(arguments, char *));
 	else if (format == '%')
-	{
 		size_format = ft_putcharInt('%');
-	}
 	return (size_format);
 }
 
@@ -87,7 +79,9 @@ int	ft_printf(char const *format, ...)
 
 int	main(void)
 {
-	int print = ft_printf("Hola que tal %i", 12);
+	int	print;
+
+	print = ft_printf("Hola que tal %i", 12);
 	ft_printf("\n");
 	ft_printf("%i", print);
 	ft_printf("\n");
