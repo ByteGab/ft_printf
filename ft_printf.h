@@ -6,7 +6,7 @@
 /*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 18:14:17 by gafreire          #+#    #+#             */
-/*   Updated: 2024/11/08 19:24:06 by gafreire         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:02:41 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_putcharInt(char c);
 int	ft_putstrInt(char *s);
 int	ft_putnbrInt(int n);
 int	ft_putnbrUn(unsigned int n);
-int	ft_upperHex(char *s);
-int	ft_lowerHex(char *s);
-int ft_voidHex(void * c);
+int	ft_upperHex(int n);
+int	ft_lowerHex(int n);
+int	ft_voidHex(void *c);
 
 #endif
