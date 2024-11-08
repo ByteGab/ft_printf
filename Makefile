@@ -3,7 +3,10 @@ SOURCES = ft_printf.c \
 			ft_putcharInt.c \
 			ft_putstrInt.c \
 			ft_putnbrInt.c \
-			ft_putnbrUn.c 
+			ft_putnbrUn.c \
+			ft_lowerHex \
+			ft_upperHex \
+			ft_voidHex
 OBJECTS = $(SOURCES:.c=.o)                                                 
 
 CC = cc                                                                      
