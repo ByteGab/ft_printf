@@ -10,14 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_upperHex(int n)
-{
-      int size_format;
+# include "ft_printf.h"
+
+int ft_upperHex(unsigned int n)
+{   
+    int size_format;
+	char * baseHex;
     
     size_format = 0;
-	if (n > 16)
+	baseHex = "123456789ABCDEF";
+	if (n >= 16)
 	{
 		size_format += ft_upperHex(n / 10);
 		size_format += ft_upperHex(n % 10);
 	}
+	else
+	{
+		size_format += ft_putcharInt(baseHex[n % 16]);
+	}
+	return (size_format);
 }
