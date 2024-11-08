@@ -10,14 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_lowerHex(int n)
+#include "ft_printf.h"
+
+int	ft_lowerHex(unsigned int n)
 {
     int size_format;
+	char * baseHex;
     
     size_format = 0;
-	if (n > 16)
+	baseHex = "123456789abcdef";
+	if (n >= 16)
 	{
 		size_format += ft_lowerHex(n / 10);
 		size_format += ft_lowerHex(n % 10);
 	}
+	else
+	{
+		size_format += ft_putcharInt(baseHex[n % 16]);
+	}
+	return (size_format);
 }
