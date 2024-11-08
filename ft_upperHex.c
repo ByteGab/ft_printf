@@ -6,11 +6,18 @@
 /*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 19:08:02 by gafreire          #+#    #+#             */
-/*   Updated: 2024/11/08 19:10:01 by gafreire         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:57:56 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_upperHex(char *s)
+int ft_upperHex(int n)
 {
+      int size_format;
     
+    size_format = 0;
+	if (n > 16)
+	{
+		size_format += ft_upperHex(n / 10);
+		size_format += ft_upperHex(n % 10);
+	}
 }
