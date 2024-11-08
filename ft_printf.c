@@ -6,7 +6,7 @@
 /*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:08:26 by gafreire          #+#    #+#             */
-/*   Updated: 2024/11/08 19:22:35 by gafreire         ###   ########.fr       */
+/*   Updated: 2024/11/08 19:56:55 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ static int	formats(va_list arguments, char format)
 	else if (format == 'u')
 		size_format = ft_putnbrUn(va_arg(arguments, int));
 	else if (format == 'x')
-		size_format = ft_lowerHex(va_arg(arguments, char *));
+		size_format = ft_lowerHex(va_arg(arguments, int));
 	else if (format == 'X')
-		size_format = ft_upperHex(va_arg(arguments, char *));
+		size_format = ft_upperHex(va_arg(arguments, int));
 	else if (format == '%')
 		size_format = ft_putcharInt('%');
 	return (size_format);
