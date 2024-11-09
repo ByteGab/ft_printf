@@ -6,7 +6,7 @@
 /*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 18:20:01 by gafreire          #+#    #+#             */
-/*   Updated: 2024/11/02 20:15:05 by gafreire         ###   ########.fr       */
+/*   Updated: 2024/11/09 19:15:42 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 int	ft_putstrInt(char *s)
 {
 	int i;
-	if(s == NULL)
-		return (write(1,"(null)",6)); // repasar
+
+	if (s == NULL)
+		return (write(1, "(null)", 6)); // repasar
 	i = 0;
 	while (s[i] != '\0')
 	{
