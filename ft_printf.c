@@ -19,21 +19,21 @@ static int	formats(va_list arguments, char format)
 
 	size_format = 0;
 	if (format == 'c')
-		size_format = ft_putcharInt(va_arg(arguments, int));
+		size_format = ft_putcharint(va_arg(arguments, int));
 	else if (format == 's')
-		size_format = ft_putstrInt(va_arg(arguments, char *));
+		size_format = ft_putstrint(va_arg(arguments, char *));
 	else if (format == 'p')
-		size_format = ft_voidHex(va_arg(arguments, void *)); // void *
+		size_format = ft_voidhex(va_arg(arguments, void *));
 	else if (format == 'd' || format == 'i')
-		size_format = ft_putnbrInt(va_arg(arguments, int));
+		size_format = ft_putnbrint(va_arg(arguments, int));
 	else if (format == 'u')
-		size_format = ft_putnbrUn(va_arg(arguments, int));
+		size_format = ft_putnbrun(va_arg(arguments, int));
 	else if (format == 'x')
-		size_format = ft_lowerHex(va_arg(arguments, unsigned int));
+		size_format = ft_lowerhex(va_arg(arguments, unsigned int));
 	else if (format == 'X')
-		size_format = ft_upperHex(va_arg(arguments, unsigned int));
+		size_format = ft_upperhex(va_arg(arguments, unsigned int));
 	else if (format == '%')
-		size_format = ft_putcharInt('%');
+		size_format = ft_putcharint('%');
 	return (size_format);
 }
 
@@ -57,7 +57,7 @@ int	ft_printf(char const *format, ...)
 			}
 		}
 		else
-			value += ft_putcharInt(format[i]);
+			value += ft_putcharint(format[i]);
 		i++;
 	}
 	va_end(arguments);
