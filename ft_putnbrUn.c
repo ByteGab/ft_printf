@@ -6,7 +6,7 @@
 /*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 19:54:30 by gafreire          #+#    #+#             */
-/*   Updated: 2024/11/02 19:56:24 by gafreire         ###   ########.fr       */
+/*   Updated: 2024/11/09 19:59:20 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putnbrUn(unsigned int n)
 {
-	unsigned int size_format;
+	unsigned int	size_format;
 
 	size_format = 0;
 	/*if (n < 0)
