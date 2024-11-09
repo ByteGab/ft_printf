@@ -15,12 +15,13 @@
 
 # include <unistd.h>
 int	ft_printf(char const *format, ...);
-int	ft_putcharInt(char c);
+int	ft_putcharInt(int c);
 int	ft_putstrInt(char *s);
+int ft_voidHex(void *n);
 int	ft_putnbrInt(int n);
 int	ft_putnbrUn(unsigned int n);
-int	ft_upperHex(int n);
-int	ft_lowerHex(int n);
-int	ft_voidHex(void *c);
+int	ft_upperHex(unsigned int n);
+int	ft_lowerHex(unsigned int n);
+
 
 #endif
