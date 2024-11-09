@@ -13,14 +13,6 @@
 #include "ft_printf.h"
 #include <stdarg.h>
 
-// va_start
-// va_arg
-// va_copy
-// va_end
-// write
-// malloc
-// free
-
 static int	formats(va_list arguments, char format)
 {
 	int	size_format;
@@ -31,17 +23,15 @@ static int	formats(va_list arguments, char format)
 	else if (format == 's')
 		size_format = ft_putstrInt(va_arg(arguments, char *));
 	else if (format == 'p')
-		size_format = ft_voidHex(va_arg(arguments, void *));
-	else if (format == 'd')
-		size_format = ft_putnbrInt(va_arg(arguments, int));
-	else if (format == 'i')
+		size_format = ft_voidHex(va_arg(arguments, void *)); // void *
+	else if (format == 'd' || format == 'i')
 		size_format = ft_putnbrInt(va_arg(arguments, int));
 	else if (format == 'u')
 		size_format = ft_putnbrUn(va_arg(arguments, int));
 	else if (format == 'x')
-		size_format = ft_lowerHex(va_arg(arguments, int));
+		size_format = ft_lowerHex(va_arg(arguments, unsigned int));
 	else if (format == 'X')
-		size_format = ft_upperHex(va_arg(arguments, int));
+		size_format = ft_upperHex(va_arg(arguments, unsigned int));
 	else if (format == '%')
 		size_format = ft_putcharInt('%');
 	return (size_format);
@@ -67,22 +57,21 @@ int	ft_printf(char const *format, ...)
 			}
 		}
 		else
-		{
-			write(1, &format[i], 1);
-		}
+			value += ft_putcharInt(format[i]); 
 		i++;
-		value++;
 	}
 	va_end(arguments);
 	return (value);
 }
 
+/*
 int	main(void)
 {
 	int	print;
 
-	print = ft_printf("Hola que tal %i", 12);
+	print = ft_printf(" %p ", -1);
 	ft_printf("\n");
 	ft_printf("%i", print);
 	ft_printf("\n");
 }
+*/
