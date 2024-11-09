@@ -19,9 +19,12 @@ int	ft_putnbrInt(int n)
 	size_format = 0;
 	if (n == -2147483648)
 	{
+		/*
 		size_format += ft_putcharInt('-');
 		size_format += ft_putcharInt('2');
 		size_format += ft_putnbrInt(147483648);
+		*/
+		return (write(1, "-2147483648", 11));
 	}
 	if (n < 0)
 	{
