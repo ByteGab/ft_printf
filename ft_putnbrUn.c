@@ -16,11 +16,13 @@ int	ft_putnbrUn(unsigned int n)
 {
 	unsigned int size_format;
 
-	if (n < 0)
+	size_format = 0;
+	/*if (n < 0)
 	{
 		size_format += ft_putcharInt('-');
 		n = -n;
 	}
+	*/
 	if (n > 9)
 	{
 		size_format += ft_putnbrInt(n / 10);
