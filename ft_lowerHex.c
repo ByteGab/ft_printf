@@ -18,11 +18,11 @@ int	ft_lowerHex(unsigned int n)
 	char * baseHex;
     
     size_format = 0;
-	baseHex = "123456789abcdef";
+	baseHex = "0123456789abcdef";
 	if (n >= 16)
 	{
-		size_format += ft_lowerHex(n / 10);
-		size_format += ft_lowerHex(n % 10);
+		size_format += ft_lowerHex((unsigned int)n / 16);
+		size_format += ft_lowerHex((unsigned int)n % 16);
 	}
 	else
 	{
