@@ -15,7 +15,8 @@
 int	ft_putstrInt(char *s)
 {
 	int i;
-
+	if(s == NULL)
+		return (write(1,"(null)",6)); // repasar
 	i = 0;
 	while (s[i] != '\0')
 	{
