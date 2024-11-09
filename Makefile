@@ -1,12 +1,12 @@
 NAME = libftprintf.a
 SOURCES = ft_printf.c \
-			ft_putcharInt.c \
-			ft_putstrInt.c \
-			ft_voidHex.c \
-			ft_putnbrInt.c \
-			ft_putnbrUn.c \
-			ft_lowerHex.c \
-			ft_upperHex.c 
+			ft_putcharint.c \
+			ft_putstrint.c \
+			ft_voidhex.c \
+			ft_putnbrint.c \
+			ft_putnbrun.c \
+			ft_lowerhex.c \
+			ft_upperhex.c 
 
 OBJECTS = $(SOURCES:.c=.o)                                                 
 
