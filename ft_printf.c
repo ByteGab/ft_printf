@@ -6,7 +6,7 @@
 /*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:08:26 by gafreire          #+#    #+#             */
-/*   Updated: 2024/11/09 19:13:06 by gafreire         ###   ########.fr       */
+/*   Updated: 2024/11/10 17:41:16 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,15 +63,21 @@ int	ft_printf(char const *format, ...)
 	va_end(arguments);
 	return (value);
 }
-
 /*
+#include <stdio.h>
+
 int	main(void)
 {
 	int	print;
+	int	*paco;
+	int	*paco1;
 
-	print = ft_printf(" %p ", -1);
-	ft_printf("\n");
-	ft_printf("%i", print);
-	ft_printf("\n");
+	paco = 0;
+	print = ft_printf(" %x", 426);
+	printf("%p", NULL);
+	printf("%p", paco);
+	//ft_printf("\n");
+	//ft_printf("%i", print);
+	//ft_printf("\n");
 }
 */
