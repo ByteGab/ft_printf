@@ -12,7 +12,6 @@ OBJECTS = $(SOURCES:.c=.o)
 
 CC = cc                                                                      
 CFLAGS = -Wall -Wextra -Werror
-INCLUDE = ft_printf.h
 RM = rm -rf                                                                     
 
 all: $(NAME)
