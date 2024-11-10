@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_upperhex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gafreire <gafreire@student.42.fr>          #+#  +:+       +#+        */
+/*   By: gafreire <gafreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-11-09 19:41:24 by gafreire          #+#    #+#             */
-/*   Updated: 2024-11-09 19:41:24 by gafreire         ###   ########.fr       */
+/*   Created: 2024/11/09 19:41:24 by gafreire          #+#    #+#             */
+/*   Updated: 2024/11/10 17:29:11 by gafreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@ int	ft_upperhex(unsigned int n)
 		size_format += ft_upperhex(n % 16);
 	}
 	else
-	{
 		size_format += ft_putcharint(basehex[n % 16]);
-	}
 	return (size_format);
 }
